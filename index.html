@@ -17,7 +17,6 @@
       <option value="german">German</option>
     </select>
 
-    <button id="profileButton">Vào mas</button>
     <!-- Kết quả -->
     <p id="result"></p>
 
@@ -39,14 +38,6 @@
           } else if (selectedValue === "german") {
             window.location.href = "english_profile.html";
           }
-        });
-
-      // Lắng nghe sự kiện khi nút Profile được nhấn
-      document
-        .getElementById("profileButton")
-        .addEventListener("click", function () {
-          // Chuyển hướng người dùng đến trang profile
-          window.location.href = "mas.html";
         });
     </script>
   </body>
