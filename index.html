@@ -10,6 +10,7 @@
 
     <!-- Thanh chọn mở ra -->
     <select id="languages">
+      <option value="#######">lua chon</option>
       <option value="english">English</option>
       <option value="spanish">Spanish</option>
       <option value="french">French</option>
@@ -26,10 +27,6 @@
         .addEventListener("change", function () {
           // Lấy giá trị đã chọn
           var selectedValue = document.getElementById("languages").value;
-
-          // Hiển thị kết quả
-          document.getElementById("result").innerText =
-            "Bạn đã chọn: " + selectedValue;
 
           // Chuyển hướng tới trang profile tương ứng
           if (selectedValue === "english") {
