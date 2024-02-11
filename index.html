@@ -7,15 +7,87 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="dropdown">
-      <button onclick="toggleDropdown()" class="dropbtn">Menu</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="#">Lựa chọn 1</a>
-        <a href="#">Lựa chọn 2</a>
-        <a href="#">Lựa chọn 3</a>
+    <div class="mb-3">
+      <a
+        class="w-100 btn btn-primary"
+        data-bs-toggle="collapse"
+        href="#collapseExample2"
+        role="button"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        <h2 class="my-1">Thành viên gia đình</h2>
+      </a>
+      <div class="collapse py-2" id="collapseExample2">
+        <div>
+          <ul class="px-0">
+            <li>
+              <div class="d-flex" onclick="openForm(100001)">
+                <i class="gg-play-button-r border-0 mt-1"></i>
+                Tran Vawn A - Tran Van B
+              </div>
+
+              <ul>
+                <li>
+                  <div class="d-flex">
+                    <i
+                      class="gg-play-button-r border-0 mt-1 btn"
+                      data-bs-toggle="collapse"
+                      href="#collapseExample3"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="collapseExample3"
+                    ></i>
+                    Tran Huu Hiep - Pham Thi Huong
+                  </div>
+
+                  <ul class="collapse" id="collapseExample3">
+                    <li>
+                      <div class="d-flex">
+                        <i
+                          class="gg-play-button-r border-0 mt-1 btn"
+                          data-bs-toggle="collapse"
+                          href="#collapseExample4"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="collapseExample4"
+                        ></i>
+                        Tran Van Quyet - Tran T Hoai Thu
+                      </div>
+                      <ul class="collapse" id="collapseExample4">
+                        <li>Tran Van Tai</li>
+                        <li>Tran Minh Nguyen</li>
+                        <li>Thanh vien moi</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                        <i
+                          class="gg-play-button-r border-0 mt-1 btn"
+                          data-bs-toggle="collapse"
+                          href="#collapseExample5"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="collapseExample5"
+                        ></i>
+                        <p onclick="openForm(100002)">Trần Đình Đoàn</p>
+                        - Nguyen T A Ngoc
+                      </div>
+
+                      <ul class="collapse" id="collapseExample5">
+                        <li>Tran Minh Chau</li>
+                      </ul>
+                    </li>
+                    <li>Third</li>
+                  </ul>
+                </li>
+                <li>Second</li>
+                <li>Third</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-
-    <script src="script.js"></script>
   </body>
 </html>
