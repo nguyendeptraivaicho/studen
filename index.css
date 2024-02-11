@@ -1,6 +1,9 @@
 .THUY_profile {
   text-align: center;
   padding: 20px;
+  h2 {
+    color: #ff2f2f;
+  }
 }
 
 .avatar {
@@ -10,10 +13,10 @@
 }
 
 h2 {
-  color: #6e0e0e;
+  color: #333;
 }
 
 p {
-  color: #4c1111;
+  color: #666;
   font-size: 16px;
 }
