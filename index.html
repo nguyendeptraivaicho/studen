@@ -3,39 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document,</title>
+    <title>CHON</title>
   </head>
   <body>
-    <h2>DANH SÁCH GIÁO VIÊN:</h2>
-
-    <!-- Thanh chọn mở ra -->
-    <select id="teacher">
-      <option value="#######">GIAO VIÊN</option>
-      <option value="THUY">NGUYỄN THANH THỦY</option>
-      <option value="KHOA">LÊ ĐĂNG KHOA</option>
-      <option value="LINH">NGUYỄN LINH</option>
-      <option value="DUNG">NGUYỄN THỊ THÙY DUNG</option>
+    <!-- Nút Profile -->
+    <select id="luachon">
+      <button id="gv">GIÁO VIÊN</button>
+      <button id="hs">HỌC SINH</button>
     </select>
-    <!-- Kết quả -->
+
     <p id="result"></p>
 
     <script>
       // Lắng nghe sự kiện khi giá trị của thanh chọn thay đổi
       document
-        .getElementById("teacher")
+        .getElementById("luachon")
         .addEventListener("change", function () {
           // Lấy giá trị đã chọn
-          var selectedValue = document.getElementById("teacher").value;
+          var selectedValue = document.getElementById("luachon").id;
 
           // Chuyển hướng tới trang profile tương ứng
-          if (selectedValue === "THUY") {
-            window.location.href = "ds/THUY_profile.html";
+          if (selectedValue === "gv") {
+            window.location.href = "gv,hs/giaovien.html";
           } else if (selectedValue === "KHOA") {
-            window.location.href = "ds/KHOA_profile.html";
-          } else if (selectedValue === "LINH") {
-            window.location.href = "ds/LINH_profile.html";
-          } else if (selectedValue === "DUNG") {
-            window.location.href = "ds/DUNG_profile.html";
+            window.location.href = "gv,hs/hocsinh.html";
           }
         });
     </script>
