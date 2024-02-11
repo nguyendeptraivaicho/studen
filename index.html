@@ -3,31 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CHON</title>
+    <title>CHON ne</title>
   </head>
   <body>
     <!-- Nút Profile -->
-    <select id="luachon">
-      <button id="gv">GIÁO VIÊN</button>
-      <button id="hs">HỌC SINH</button>
-    </select>
-
-    <p id="result"></p>
-
+    <button id="gv">GIÁO VIÊN</button>
     <script>
-      // Lắng nghe sự kiện khi giá trị của thanh chọn thay đổi
+      // Lắng nghe sự kiện khi nút Profile được nhấn
+      document.getElementById("gv").addEventListener("click", function () {
+        // Chuyển hướng người dùng đến trang profile
+        window.location.href = "gv,hs/giaovien.html";
+      });
+    </script>
+    <button id="hs">HỌC SINH</button>
+    <script>
+      // Lắng nghe sự kiện khi nút Profile được nhấn
       document
-        .getElementById("luachon")
-        .addEventListener("change", function () {
-          // Lấy giá trị đã chọn
-          var selectedValue = document.getElementById("luachon").id;
-
-          // Chuyển hướng tới trang profile tương ứng
-          if (selectedValue === "gv") {
-            window.location.href = "gv,hs/giaovien.html";
-          } else if (selectedValue === "KHOA") {
-            window.location.href = "gv,hs/hocsinh.html";
-          }
+        .getElementById("profileButton")
+        .addEventListener("click", function () {
+          // Chuyển hướng người dùng đến trang profile
+          window.location.href = "gv,hs/hocsinh.html";
         });
     </script>
   </body>
