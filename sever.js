@@ -1,12 +1,28 @@
-const WebSocket = require("ws");
-const wss = new WebSocket.Server({ port: 3000 });
+const express = require("express");
+const http = require("http");
+const socketIo = require("socket.io");
+const fs = require("fs");
 
-wss.on("connection", function connection(ws) {
-  ws.on("message", function incoming(message) {
-    wss.clients.forEach(function each(client) {
-      if (client !== ws && client.readyState === WebSocket.OPEN) {
-        client.send(message);
-      }
+const app = express();
+const server = http.createServer(app);
+const io = socketIo(server);
+
+app.use(express.static(__dirname + "/public"));
+
+io.on("connection", (socket) => {
+  console.log("New user connected");
+
+  socket.on("message", (message) => {
+    io.emit("message", message);
+    fs.appendFile("chatlog.txt", message + "\n", (err) => {
+      if (err) throw err;
+      console.log("Message saved to chatlog.txt");
     });
   });
+});
+
+const PORT = process.env.PORT || 3000;
+
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
