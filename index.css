@@ -24,4 +24,5 @@ p {
   position: absolute; /* Đặt vị trí tuyệt đối */
   top: 5000px; /* Khoảng cách từ phía trên */
   left: 10000px; /* Khoảng cách từ phía trái */
+  width: 500px;
 }
