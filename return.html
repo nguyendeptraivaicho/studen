@@ -39,5 +39,36 @@
           }
         });
     </script>
+    <h2>DANH SÁCH HOC SINH:</h2>
+
+    <!-- Thanh chọn mở ra -->
+    <select id="studen">
+      <option value="#######">GIAO VIÊN</option>
+      <option value="THUY">NGUYỄN THANH THỦY</option>
+      <option value="KHOA">LÊ ĐĂNG KHOA</option>
+      <option value="LINH">NGUYỄN LINH</option>
+      <option value="DUNG">NGUYỄN THỊ THÙY DUNG</option>
+    </select>
+    <!-- Kết quả -->
+    <p id="result"></p>
+
+    <script>
+      // Lắng nghe sự kiện khi giá trị của thanh chọn thay đổi
+      document.getElementById("studen").addEventListener("change", function () {
+        // Lấy giá trị đã chọn
+        var selectedValue = document.getElementById("studen").value;
+
+        // Chuyển hướng tới trang profile tương ứng
+        if (selectedValue === "THUY") {
+          window.location.href = "ds/THUY_profile.html";
+        } else if (selectedValue === "KHOA") {
+          window.location.href = "ds/KHOA_profile.html";
+        } else if (selectedValue === "LINH") {
+          window.location.href = "ds/LINH_profile.html";
+        } else if (selectedValue === "DUNG") {
+          window.location.href = "ds/DUNG_profile.html";
+        }
+      });
+    </script>
   </body>
 </html>
