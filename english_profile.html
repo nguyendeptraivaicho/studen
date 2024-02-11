@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <button id="backBtn">Quay lại</button>
     <div class="profile">
       <img src="avatar.jpg" alt="Avatar" class="avatar" />
       <h2>Nguyen Van A</h2>
@@ -16,5 +17,12 @@
         dolor mattis condimentum.
       </p>
     </div>
+    <script>
+      // Lắng nghe sự kiện khi nút Quay lại được nhấn
+      document.getElementById("backBtn").addEventListener("click", function () {
+        // Quay lại trang trước đó
+        window.history.back();
+      });
+    </script>
   </body>
 </html>
