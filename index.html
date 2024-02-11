@@ -16,5 +16,33 @@
         dolor mattis condimentum.
       </p>
     </div>
+
+    <h2>Chọn quốc gia:</h2>
+
+    <!-- Thanh chọn mở xuống -->
+    <select id="countries">
+      <option value="vn">Việt Nam</option>
+      <option value="us">United States</option>
+      <option value="uk">United Kingdom</option>
+      <option value="jp">Japan</option>
+      <option value="kr">South Korea</option>
+    </select>
+
+    <!-- Kết quả -->
+    <p id="result"></p>
+
+    <script>
+      // Lắng nghe sự kiện khi giá trị của thanh chọn thay đổi
+      document
+        .getElementById("countries")
+        .addEventListener("change", function () {
+          // Lấy giá trị đã chọn
+          var selectedValue = document.getElementById("countries").value;
+
+          // Hiển thị kết quả
+          document.getElementById("result").innerText =
+            "Bạn đã chọn: " + selectedValue;
+        });
+    </script>
   </body>
 </html>
