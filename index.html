@@ -16,6 +16,7 @@
       <option value="german">German</option>
     </select>
 
+    <button id="resetBtn">Chọn lại</button>
     <!-- Kết quả -->
     <p id="result"></p>
 
@@ -42,6 +43,10 @@
             window.location.href = "english_profile.html";
           }
         });
+      $("#resetBtn").click(function () {
+        $("#languages").val(""); // Đặt giá trị của thanh chọn về mặc định
+        resetProfile(); // Gọi lại nội dung profile mặc định
+      });
     </script>
   </body>
 </html>
