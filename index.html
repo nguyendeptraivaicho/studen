@@ -6,6 +6,7 @@
     <title>Document</title>
   </head>
   <body>
+    <button id="profileButton">login,up</button>
     <h2>DANH SÁCH GIÁO VIÊN:</h2>
 
     <!-- Thanh chọn mở ra -->
@@ -37,6 +38,12 @@
           } else if (selectedValue === "DUNG") {
             window.location.href = "ds/DUNG_profile.html";
           }
+        });
+      document
+        .getElementById("profileButton")
+        .addEventListener("click", function () {
+          // Chuyển hướng người dùng đến trang profile
+          window.location.href = "log in/log.html";
         });
     </script>
   </body>
