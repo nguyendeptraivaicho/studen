@@ -1,11 +1,13 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static("public"));
-app.use(express.json());
+// Sử dụng bodyParser để lấy dữ liệu từ request body
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// Mock database
+// Dữ liệu người dùng được lưu tạm thời trong một mảng users
 const users = [];
 
 // Đăng ký tài khoản
@@ -18,7 +20,7 @@ app.post("/signup", (req, res) => {
     return res.status(400).json({ message: "Email already exists." });
   }
 
-  // Lưu thông tin người dùng vào "database"
+  // Lưu thông tin người dùng vào mảng users
   users.push({ email, password });
   res.status(200).json({ message: "Signed up successfully." });
 });
@@ -38,6 +40,7 @@ app.post("/login", (req, res) => {
   }
 });
 
+// Khởi động máy chủ
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

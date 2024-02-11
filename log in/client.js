@@ -1,4 +1,3 @@
-// Logic xử lý đăng ký và đăng nhập trên client-side
 document
   .getElementById("signup-form")
   .addEventListener("submit", function (event) {
@@ -6,7 +5,6 @@ document
     const email = document.getElementById("signup-email").value;
     const password = document.getElementById("signup-password").value;
 
-    // Gửi yêu cầu đăng ký đến server
     fetch("/signup", {
       method: "POST",
       headers: {
@@ -31,7 +29,6 @@ document
     const email = document.getElementById("login-email").value;
     const password = document.getElementById("login-password").value;
 
-    // Gửi yêu cầu đăng nhập đến server
     fetch("/login", {
       method: "POST",
       headers: {
