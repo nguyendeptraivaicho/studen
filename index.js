@@ -1,14 +1,16 @@
-const socket = io();
+const socket = new WebSocket("ws://localhost:3000");
 
 const message = document.getElementById("message");
 const sendBtn = document.getElementById("send");
 const output = document.getElementById("output");
 
 sendBtn.addEventListener("click", () => {
-  socket.emit("message", message.value);
-  message.value = "";
+  if (message.value) {
+    socket.send(message.value);
+    message.value = "";
+  }
 });
 
-socket.on("message", (data) => {
-  output.innerHTML += `<p>${data}</p>`;
-});
+socket.onmessage = function (event) {
+  output.innerHTML += "<p>" + event.data + "</p>";
+};

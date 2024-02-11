@@ -1,26 +1,12 @@
-const express = require("express");
-const app = express();
-const http = require("http").Server(app);
-const io = require("socket.io")(http);
+const WebSocket = require("ws");
+const wss = new WebSocket.Server({ port: 3000 });
 
-app.use(express.static("public"));
-
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/mas.html");
-});
-
-io.on("connection", (socket) => {
-  console.log("Một người dùng đã kết nối");
-
-  socket.on("message", (data) => {
-    io.sockets.emit("message", data);
+wss.on("connection", function connection(ws) {
+  ws.on("message", function incoming(message) {
+    wss.clients.forEach(function each(client) {
+      if (client !== ws && client.readyState === WebSocket.OPEN) {
+        client.send(message);
+      }
+    });
   });
-
-  socket.on("disconnect", () => {
-    console.log("Một người dùng đã ngắt kết nối");
-  });
-});
-
-http.listen(3000, () => {
-  console.log("Server đang lắng nghe trên cổng 3000");
 });
