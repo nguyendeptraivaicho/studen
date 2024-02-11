@@ -3,29 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Profile</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Dropdown Select</title>
   </head>
   <body>
-    <div class="profile">
-      <img src="avatar.jpg" alt="Avatar" class="avatar" />
-      <h2>Nguyen Van A</h2>
-      <p>Software Developer</p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis leo id
-        dolor mattis condimentum.
-      </p>
-    </div>
+    <h2>Chọn ngôn ngữ yêu thích của bạn:</h2>
 
-    <h2>Chọn quốc gia:</h2>
-
-    <!-- Thanh chọn mở xuống -->
-    <select id="countries">
-      <option value="profile">Việt Nam</option>
-      <option value="us">United States</option>
-      <option value="uk">United Kingdom</option>
-      <option value="jp">Japan</option>
-      <option value="kr">South Korea</option>
+    <!-- Thanh chọn mở ra -->
+    <select id="languages">
+      <option value="english">English</option>
+      <option value="spanish">Spanish</option>
+      <option value="french">French</option>
+      <option value="german">German</option>
     </select>
 
     <!-- Kết quả -->
@@ -34,14 +22,25 @@
     <script>
       // Lắng nghe sự kiện khi giá trị của thanh chọn thay đổi
       document
-        .getElementById("countries")
+        .getElementById("languages")
         .addEventListener("change", function () {
           // Lấy giá trị đã chọn
-          var selectedValue = document.getElementById("countries").value;
+          var selectedValue = document.getElementById("languages").value;
 
           // Hiển thị kết quả
           document.getElementById("result").innerText =
             "Bạn đã chọn: " + selectedValue;
+
+          // Chuyển hướng tới trang profile tương ứng
+          if (selectedValue === "english") {
+            window.location.href = "english_profile.html";
+          } else if (selectedValue === "spanish") {
+            window.location.href = "english_profile.html";
+          } else if (selectedValue === "french") {
+            window.location.href = "english_profile.html";
+          } else if (selectedValue === "german") {
+            window.location.href = "english_profile.html";
+          }
         });
     </script>
   </body>
