@@ -22,6 +22,6 @@ p {
 }
 #gv {
   position: absolute; /* Đặt vị trí tuyệt đối */
-  top: 50px; /* Khoảng cách từ phía trên */
-  left: 50px; /* Khoảng cách từ phía trái */
+  top: 5000px; /* Khoảng cách từ phía trên */
+  left: 10000px; /* Khoảng cách từ phía trái */
 }
