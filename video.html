@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phim</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Phim</h1>
+    </header>
+
+    <main>
+        <section id="video-container">
+            <!-- Video sẽ được chèn ở đây bằng JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Trang Web Xem Phim</p>
+    </footer>
+
+    <script>
+        // JavaScript để chèn video dựa trên query string
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const movieId = params.get('movie');
+
+            const videoContainer = document.getElementById('video-container');
+
+            if (movieId) {
+                const videoUrl = `videos/movie${movieId}.mp4`;
+                videoContainer.innerHTML = `
+                    <video controls width="100%">
+                        <source src="${videoUrl}" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ thẻ video.
+                    </video>
+                `;
+            } else {
+                videoContainer.innerHTML = '<p>Không tìm thấy video.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
