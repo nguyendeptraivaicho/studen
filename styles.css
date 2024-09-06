@@ -47,9 +47,16 @@ h1 {
     margin-bottom: 2rem;
 }
 
-video {
+#movie-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#movie-list img {
     width: 100%;
-    max-width: 600px;
+    max-width: 300px;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 footer {
