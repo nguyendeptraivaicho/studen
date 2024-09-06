@@ -42,16 +42,31 @@ main {
 }
 
 .movie-list li {
+    display: flex;
+    align-items: center;
     margin: 10px 0;
 }
 
 .movie-list a {
     text-decoration: none;
     color: #007bff;
-    font-size: 18px;
+    display: flex;
+    align-items: center;
 }
 
-.movie-list a:hover {
+.movie-thumbnail {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.movie-title {
+    font-size: 18px;
+    color: #007bff;
+}
+
+.movie-list a:hover .movie-title {
     text-decoration: underline;
 }
 
