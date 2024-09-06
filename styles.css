@@ -18,39 +18,6 @@ main {
     align-items: center;
 }
 
-.menu {
-    width: 100%;
-    background-color: #fff;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.menu-toggle {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.genre-menu {
-    display: none;
-    margin-top: 10px;
-}
-
-.genre-menu a {
-    display: block;
-    padding: 10px;
-    color: #007bff;
-    text-decoration: none;
-}
-
-.genre-menu a:hover {
-    text-decoration: underline;
-}
-
 .movie-list {
     width: 80%;
     padding: 20px;
