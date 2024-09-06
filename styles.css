@@ -1,4 +1,128 @@
-/* Các kiểu khác không thay đổi */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu {
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.menu-toggle {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.genre-menu {
+    display: none;
+    margin-top: 10px;
+}
+
+.genre-menu a {
+    display: block;
+    padding: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.genre-menu a:hover {
+    text-decoration: underline;
+}
+
+.movie-list {
+    width: 80%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.movie-list h2 {
+    margin-top: 0;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.movie-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.movie-list li {
+    margin: 10px 0;
+}
+
+.movie-list a {
+    text-decoration: none;
+    color: #007bff;
+    display: block;
+    text-align: center;
+}
+
+.movie-thumbnail {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.movie-title {
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #007bff;
+}
+
+.movie-list a:hover .movie-title {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.movie-player {
+    width: 80%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
 
 .back-button {
     background-color: #007bff;
