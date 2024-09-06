@@ -9,26 +9,30 @@
 <body>
     <header>
         <h1>Trang Web Xem Phim</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Tìm kiếm phim...">
+        </div>
     </header>
 
     <main>
         <section id="movie-list">
             <h2>Danh Sách Phim</h2>
-            <ul>
-                <li>
-                    <h3>Phim 3</h3>
+            <ul id="movie-list-ul">
+                <li class="movie-item">
+                    <h3>Phim 1</h3>
                     <video controls>
                         <source src="ds/giaovien_/videone.mp4" type="video/mp4">
                         Trình duyệt của bạn không hỗ trợ thẻ video.
                     </video>
                 </li>
-                <li>
+                <li class="movie-item">
                     <h3>Phim 2</h3>
                     <video controls>
                         <source src="videos/movie2.mp4" type="video/mp4">
                         Trình duyệt của bạn không hỗ trợ thẻ video.
                     </video>
                 </li>
+                <!-- Thêm nhiều phim hơn ở đây -->
             </ul>
         </section>
     </main>
