@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function filterMovies(query) {
         const movies = movieList.querySelectorAll('li');
         movies.forEach(movie => {
-            const title = movie.textContent.toLowerCase();
+            const title = movie.querySelector('.movie-title').textContent.toLowerCase();
             if (title.includes(query.toLowerCase())) {
                 movie.style.display = '';
             } else {
@@ -28,19 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     movieList.addEventListener('click', (e) => {
-        if (e.target.tagName === 'A') {
+        if (e.target.closest('a')) {
             e.preventDefault();
-            const movieId = e.target.getAttribute('data-movie');
+            const movieId = e.target.closest('a').getAttribute('data-movie');
             const movieSrc = movies[movieId];
-            const movieName = e.target.textContent;
-            
-            if (movieSrc) {
-                videoElement.src = movieSrc;
-                videoElement.play();
-                movieTitle.textContent = `Đang xem: ${movieName}`;
-            } else {
-                movieTitle.textContent = `Phim không có sẵn.`;
-            }
-        }
-    });
-});
+            const movieName = e.target.closest('a
