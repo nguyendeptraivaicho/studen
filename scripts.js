@@ -28,8 +28,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     movieList.addEventListener('click', (e) => {
-        if (e.target.closest('a')) {
+        const movieLink = e.target.closest('a');
+        if (movieLink) {
             e.preventDefault();
-            const movieId = e.target.closest('a').getAttribute('data-movie');
+            const movieId = movieLink.getAttribute('data-movie');
             const movieSrc = movies[movieId];
-            const movieName = e.target.closest('a
+            const movieName = movieLink.querySelector('.movie-title').textContent;
+
+            if (movieSrc) {
+                videoElement.src = movieSrc;
+                videoElement.play();
+                movieTitle.textContent = `Đang xem: ${movieName}`;
+            } else {
+                movieTitle.textContent = `Phim không có sẵn.`;
+            }
+        }
+    });
+});
