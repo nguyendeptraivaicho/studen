@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden; /* Ẩn phần bên ngoài của slider */
+    position: relative;
+}
+
+.slider {
+    display: flex; /* Hiển thị các hình ảnh theo hàng ngang */
+    width: 300%; /* Chiều rộng của slider cần phải đủ rộng để chứa tất cả hình ảnh */
+    animation: slide 9s infinite linear; /* Chạy hiệu ứng trượt liên tục */
+}
+
+.slider img {
+    width: 33.33%; /* Mỗi hình ảnh chiếm 1/3 chiều rộng của slider */
+    flex-shrink: 0; /* Không cho hình ảnh co lại khi chứa trong slider */
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-66.66%); } /* Đẩy slider sang trái để hiện hình ảnh thứ 2 và thứ 3 */
+}
