@@ -42,27 +42,28 @@ main {
 }
 
 .movie-list li {
-    display: flex;
-    align-items: center;
     margin: 10px 0;
 }
 
 .movie-list a {
     text-decoration: none;
     color: #007bff;
-    display: flex;
-    align-items: center;
+    display: block;
+    text-align: center;
 }
 
 .movie-thumbnail {
     width: 100px;
     height: 150px;
     object-fit: cover;
-    margin-right: 10px;
+    display: block;
+    margin: 0 auto;
 }
 
 .movie-title {
-    font-size: 18px;
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
     color: #007bff;
 }
 
