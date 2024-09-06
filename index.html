@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CHON</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đọc Truyện Tranh</title>
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <h1>l</h1>
-  <body>
-    <!-- Nút Profile -->
-    <button id="gv">LỰA CHỌN</button>
-    <script>
-      // Lắng nghe sự kiện khi nút Profile được nhấn
-      document.getElementById("gv").addEventListener("click", function () {
-        // Chuyển hướng người dùng đến trang profile
-        window.location.href = "return.html";
-      });
-    </script>
-  </body>
-  <body>
+</head>
+<body>
     <header>
-        <h1>Trang Web Phim</h1>
-        <input type="text" id="search-bar" placeholder="Tìm kiếm phim...">
+        <h1>Đọc Truyện Tranh</h1>
     </header>
     <main>
-        <section class="movie-list" id="movie-list">
-            <!-- Danh sách phim sẽ được chèn ở đây bằng JavaScript -->
-        </section>
+        <div class="comic-reader">
+            <button id="prev-btn">Quay lại</button>
+            <div class="comic-page">
+                <!-- Trang truyện sẽ được chèn vào đây bằng JavaScript -->
+            </div>
+            <button id="next-btn">Tiếp theo</button>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2024 Trang Web Phim</p>
+        <p>&copy; 2024 Đọc Truyện Tranh</p>
     </footer>
     <script src="scripts.js"></script>
 </body>
