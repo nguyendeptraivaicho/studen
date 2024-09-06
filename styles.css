@@ -3,25 +3,29 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.slider-container {
+.moving-container {
     width: 100%;
-    overflow: hidden; /* Ẩn phần bên ngoài của slider */
+    overflow: hidden; /* Ẩn phần hình ảnh nằm ngoài vùng hiển thị */
     position: relative;
+    background-color: #f0f0f0; /* Màu nền cho vùng chứa hình ảnh (tuỳ chỉnh) */
 }
 
-.slider {
+.moving-images {
     display: flex; /* Hiển thị các hình ảnh theo hàng ngang */
-    transition: transform 0.5s ease; /* Hiệu ứng trượt mượt mà */
+    width: 300%; /* Đặt chiều rộng đủ lớn để chứa tất cả hình ảnh */
+    animation: move 15s linear infinite; /* Áp dụng hiệu ứng di chuyển liên tục */
 }
 
-.slider img {
-    width: 100%;
-    flex: 0 0 100%; /* Chiều rộng của hình ảnh bằng 100% của phần tử chứa */
+.moving-images img {
+    width: 33.33%; /* Mỗi hình ảnh chiếm 1/3 chiều rộng của phần tử chứa */
+    flex-shrink: 0; /* Không cho hình ảnh co lại khi chứa trong slider */
 }
 
-@keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+@keyframes move {
+    0% {
+        transform: translateX(100%); /* Bắt đầu từ ngoài bên phải */
+    }
+    100% {
+        transform: translateX(-100%); /* Kết thúc ở ngoài bên trái */
+    }
 }
-
-/* Thay thế @key
