@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Danh sách phim với URL video tương ứng
     const movies = {
         'movie1': 'https://www.google.com/search?sca_esv=2fcb7b144273d9a6&sca_upv=1&sxsrf=ADLYWIJOgMlQYAG1YyG2pkaPZA_zdSBc4A:1725639691845&q=video&tbm=vid&source=lnms&fbs=AEQNm0D7NTKsOqMPi-yhU7bWDsijzGDOH6tj5L6fjCKjbCGom3wkeL_QP5E4yarP1ZlMcoJLi0Ydg-hbeQoypMvxP4gtK0pmMUjBogWcveFRaH6A2upMD3QLN5EQ6Fl-hB1yXFNIpWIeFn9fUYuLryANuo26qb1VTwtPpWzTfiaa8bcbuGZsAk9Bsvk9ZJEcnwnWWvbU8dTSoR8FodhPOifW6AhHGgRMWur4WTE7teQ69WuLW3SyVaU&sa=X&ved=2ahUKEwis197m3K6IAxVWk1YBHVcfAyMQ0pQJegQIFBAB&biw=1366&bih=633&dpr=1#',
-        'movie2': 'videos/movie2.mp4',
+        'movie2': 'https://www.youtube.com/watch?v=lIeoBGKyiOs',
         'movie3': 'videos/movie3.mp4',
         // Thêm nhiều phim ở đây
     };
