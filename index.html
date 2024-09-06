@@ -9,16 +9,28 @@
 <body>
     <header>
         <h1>Đọc Truyện Tranh</h1>
-        <input type="text" id="search-bar" placeholder="Tìm kiếm truyện...">
     </header>
     <main>
-        <div class="comic-reader">
-            <button id="prev-btn">Quay lại</button>
-            <div class="comic-page">
-                <!-- Trang truyện sẽ được chèn vào đây bằng JavaScript -->
+        <section class="comic-list">
+            <h2>Danh Sách Bộ Truyện</h2>
+            <ul>
+                <li><a href="#" data-comic="comic1">Bộ Truyện 1</a></li>
+                <li><a href="#" data-comic="comic2">Bộ Truyện 2</a></li>
+                <li><a href="#" data-comic="comic3">Bộ Truyện 3</a></li>
+                <!-- Thêm nhiều bộ truyện ở đây -->
+            </ul>
+        </section>
+
+        <section class="comic-viewer" id="comic-viewer">
+            <!-- Khu vực hiển thị các trang truyện của bộ truyện được chọn -->
+            <div class="comic-reader">
+                <button id="prev-btn">Quay lại</button>
+                <div class="comic-page">
+                    <!-- Trang truyện sẽ được chèn vào đây bằng JavaScript -->
+                </div>
+                <button id="next-btn">Tiếp theo</button>
             </div>
-            <button id="next-btn">Tiếp theo</button>
-        </div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Đọc Truyện Tranh</p>
