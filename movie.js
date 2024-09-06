@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Danh sách phim với URL video tương ứng
     const movies = {
-        'movie1': 'ds/giaovien_/videone.mp4',
+        'movie1': 'videos/movie1.mp4',
         'movie2': 'videos/movie2.mp4',
         'movie3': 'videos/movie3.mp4',
         // Thêm nhiều phim ở đây
