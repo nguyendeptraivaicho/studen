@@ -59,6 +59,11 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
+video {
+    width: 100%;
+    max-width: 800px;
+}
+
 footer {
     background: #333;
     color: #fff;
