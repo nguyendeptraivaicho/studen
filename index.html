@@ -3,46 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đọc Truyện Tranh</title>
+    <title>Trang Web Xem Phim</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Đọc Truyện Tranh</h1>
-        <button id="menu-btn" class="menu-btn">&#9776;</button>
-        <nav id="menu" class="menu">
-            <ul>
-                <li><a href="#">Thể loại 1</a></li>
-                <li><a href="#">Thể loại 2</a></li>
-                <li><a href="#">Thể loại 3</a></li>
-                <!-- Thêm nhiều thể loại ở đây -->
-            </ul>
-        </nav>
+        <h1>Trang Web Xem Phim</h1>
     </header>
     <main>
-        <section class="comic-list">
-            <h2>Danh Sách Bộ Truyện</h2>
+        <section class="movie-list">
+            <h2>Danh Sách Phim</h2>
             <ul>
-                <li><a href="#" data-comic="comic1">Bộ Truyện 1</a></li>
-                <li><a href="#" data-comic="comic2">Bộ Truyện 2</a></li>
-                <li><a href="#" data-comic="comic3">Bộ Truyện 3</a></li>
-                <!-- Thêm nhiều bộ truyện ở đây -->
+                <li><a href="#" data-movie="movie1">Phim 1</a></li>
+                <li><a href="#" data-movie="movie2">Phim 2</a></li>
+                <li><a href="#" data-movie="movie3">Phim 3</a></li>
+                <!-- Thêm nhiều phim ở đây -->
             </ul>
         </section>
 
-        <section class="comic-viewer" id="comic-viewer">
-            <!-- Khu vực hiển thị các trang truyện của bộ truyện được chọn -->
-            <div class="comic-reader">
-                <button id="prev-btn">Quay lại</button>
-                <div class="comic-page">
-                    <!-- Trang truyện sẽ được chèn vào đây bằng JavaScript -->
-                </div>
-                <button id="next-btn">Tiếp theo</button>
-            </div>
+        <section class="movie-player" id="movie-player">
+            <!-- Khu vực phát video -->
+            <video id="video" controls width="800">
+                <source src="" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video.
+            </video>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Đọc Truyện Tranh</p>
+        <p>&copy; 2024 Trang Web Xem Phim</p>
     </footer>
     <script src="scripts.js"></script>
 </body>
