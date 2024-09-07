@@ -9,16 +9,14 @@
 <body>
     <header>
         <h1 id="movie-title"></h1>
+        <div id="movie-description"></div>
     </header>
-    <main>
-        <video id="movie-video" controls>
-            <source id="video-source" src="" type="video/mp4">
-            Trình duyệt của bạn không hỗ trợ video tag.
-        </video>
-        <section id="episode-list">
-            <!-- Danh sách tập phim sẽ được tạo động từ JavaScript -->
-        </section>
+    <main id="episode-list">
+        <!-- Danh sách tập phim sẽ được hiển thị ở đây -->
     </main>
-    <script src="movie-script.js"></script>
+    <div id="video-player">
+        <!-- Trình phát video sẽ được hiển thị ở đây -->
+    </div>
+    <script src="movie.js"></script>
 </body>
 </html>
