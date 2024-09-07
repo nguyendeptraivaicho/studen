@@ -1,38 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const movies = [
-        {
-            id: 1,
-            title: 'Phim 1',
-            image: 'image1.jpg'
-        },
-        {
-            id: 2,
-            title: 'Phim 2',
-            image: 'image2.jpg'
-        }
-        // Thêm phim khác
-    ];
+document.addEventListener('DOMContentLoaded', function () {
+    const searchBar = document.getElementById('search-bar');
 
-    const movieList = document.getElementById('movie-list');
-    
-    movies.forEach(movie => {
-        const movieItem = document.createElement('div');
-        movieItem.className = 'movie-item';
-        movieItem.innerHTML = `
-            <a href="movie.html?id=${movie.id}">
-                <img src="${movie.image}" alt="${movie.title}">
-                <h3>${movie.title}</h3>
-            </a>
-        `;
-        movieList.appendChild(movieItem);
-    });
-
-    // Xử lý tìm kiếm
-    document.getElementById('search').addEventListener('input', (event) => {
-        const query = event.target.value.toLowerCase();
-        document.querySelectorAll('.movie-item').forEach(item => {
-            const title = item.querySelector('h3').textContent.toLowerCase();
-            item.style.display = title.includes(query) ? 'block' : 'none';
-        });
+    searchBar.addEventListener('input', function () {
+        const query = searchBar.value;
+        // Gọi API để tìm kiếm phim và cập nhật danh sách phim
+        fetch(`/api/movies?search=${query}`)
+            .then(response => response.json())
+            .then(data => {
+                // Cập nhật danh sách phim
+                const movieList = document.getElementById('movie-list');
+                movieList.innerHTML = '';
+                data.movies.forEach(movie => {
+                    const movieItem = document.createElement('div');
+                    movieItem.className = 'movie-item';
+                    movieItem.innerHTML = `
+                        <a href="movie.html?id=${movie.id}">
+                            <img src="${movie.poster}" alt="${movie.title}">
+                            <h2>${movie.title}</h2>
+                        </a>
+                    `;
+                    movieList.appendChild(movieItem);
+                });
+            });
     });
 });
