@@ -1,18 +1,38 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Xem Phim</title>
+    <title>Xem Phim</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <input type="text" id="search-bar" placeholder="Tìm kiếm phim...">
+        <h1>Trang Xem Phim</h1>
     </header>
-    <main id="movie-list">
-        <!-- Danh sách phim sẽ được hiển thị ở đây -->
+    
+    <main>
+        <section class="video-container">
+            <video id="movie" width="800" controls>
+                <source src="movie.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </section>
+        
+        <section class="movie-list">
+            <h2>Danh sách phim</h2>
+            <ul>
+                <li><a href="#" onclick="loadVideo('movie1.mp4')">Phim 1</a></li>
+                <li><a href="#" onclick="loadVideo('movie2.mp4')">Phim 2</a></li>
+                <li><a href="#" onclick="loadVideo('movie3.mp4')">Phim 3</a></li>
+            </ul>
+        </section>
     </main>
+    
+    <footer>
+        <p>&copy; 2024 Trang Xem Phim</p>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
