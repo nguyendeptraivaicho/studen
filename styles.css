@@ -1,44 +1,35 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background-color: #f4f4f4;
     padding: 10px;
     text-align: center;
 }
 
-#search {
+#search-bar {
     width: 80%;
     padding: 10px;
-    margin-top: 10px;
 }
 
 #movie-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+    justify-content: center;
 }
 
 .movie-item {
-    width: 200px;
+    margin: 10px;
     text-align: center;
 }
 
 .movie-item img {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 300px;
 }
 
-#movie-video {
-    width: 100%;
-    height: auto;
-}
-
-#episode-list {
-    margin-top: 20px;
+#video-player {
+    margin: 20px;
+    text-align: center;
 }
