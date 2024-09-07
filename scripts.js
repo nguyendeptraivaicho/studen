@@ -1,7 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const movies = [
-        { id: 1, title: 'Phim 1', image: 'image1.jpg' },
-        { id: 2, title: 'Phim 2', image: 'image2.jpg' },
+        {
+            id: 1,
+            title: 'Phim 1',
+            image: 'image1.jpg'
+        },
+        {
+            id: 2,
+            title: 'Phim 2',
+            image: 'image2.jpg'
+        }
         // Thêm phim khác
     ];
 
@@ -17,5 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
             </a>
         `;
         movieList.appendChild(movieItem);
+    });
+
+    // Xử lý tìm kiếm
+    document.getElementById('search').addEventListener('input', (event) => {
+        const query = event.target.value.toLowerCase();
+        document.querySelectorAll('.movie-item').forEach(item => {
+            const title = item.querySelector('h3').textContent.toLowerCase();
+            item.style.display = title.includes(query) ? 'block' : 'none';
+        });
     });
 });
