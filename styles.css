@@ -1,52 +1,72 @@
+/* Cài đặt màu nền tổng quát cho toàn bộ trang */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0; /* Màu nền sáng cho trang web */
 }
 
+/* Định dạng cho header */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Màu nền tối cho header */
+    color: #fff; /* Màu chữ sáng để nổi bật trên nền tối */
     text-align: center;
     padding: 1em 0;
+    border-bottom: 4px solid #ff6347; /* Đường viền dưới header với màu sắc nổi bật */
 }
 
+/* Định dạng cho phần nội dung chính */
 main {
     padding: 20px;
 }
 
+/* Định dạng cho video container */
 .video-container {
     text-align: center;
+    margin-bottom: 20px;
 }
 
+/* Định dạng cho danh sách phim */
 .movie-list {
-    margin-top: 20px;
+    background-color: #ffffff; /* Màu nền trắng cho danh sách phim */
+    border-radius: 8px; /* Bo góc cho danh sách phim */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng cho danh sách phim */
+    padding: 20px;
 }
 
+/* Định dạng cho danh sách các mục phim */
 .movie-list ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
+/* Định dạng cho từng mục phim trong danh sách */
 .movie-list li {
     margin: 10px 0;
 }
 
+/* Định dạng cho liên kết phim */
 .movie-list a {
     text-decoration: none;
-    color: #0066cc;
+    color: #007bff; /* Màu liên kết xanh dương sáng */
+    font-weight: bold;
 }
 
+/* Hiệu ứng khi di chuột qua liên kết phim */
 .movie-list a:hover {
     text-decoration: underline;
+    color: #ff6347; /* Màu sắc thay đổi khi di chuột qua liên kết */
 }
 
+/* Định dạng cho footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Màu nền tối cho footer */
+    color: #fff; /* Màu chữ sáng */
     text-align: center;
     padding: 1em 0;
     position: absolute;
     bottom: 0;
     width: 100%;
+    border-top: 4px solid #ff6347; /* Đường viền trên footer với màu sắc nổi bật */
 }
